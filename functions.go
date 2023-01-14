@@ -18,6 +18,14 @@ type FileInfo struct {
 	IsDir bool   `csv:"is_dir"`
 }
 
+func (f *FileInfo)Extension()string{
+	a := strings.Split(f.Name,".")
+	if len(a)==0{
+		return ""
+	}
+	return a[len(a)-1]
+}
+
 func FileMd5(filePath string) (string, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
