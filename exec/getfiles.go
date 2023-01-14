@@ -3,13 +3,13 @@ package main
 import (
 	"log"
 
-	filetool "github.com/takoyaki-3/file-tool"
 	csvtag "github.com/takoyaki-3/go-csv-tag/v3"
+	filetool "github.com/takoyaki-3/go-file-tool/v2"
 )
 
 func main() {
 
-	err, fileList := filetool.DirWalk("../../", filetool.DirWalkOption{
+	fileList, err := filetool.DirWalk("../", filetool.DirWalkOption{
 		Deep: 2,
 	})
 	if err != nil {

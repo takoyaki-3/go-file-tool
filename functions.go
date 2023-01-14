@@ -40,7 +40,7 @@ type DirWalkOption struct {
 	Deep          int
 }
 
-func DirWalk(dirPath string, option DirWalkOption) (error, []FileInfo) {
+func DirWalk(dirPath string, option DirWalkOption) ([]FileInfo, error) {
 
 	fileInfos := []FileInfo{}
 
@@ -108,7 +108,7 @@ func DirWalk(dirPath string, option DirWalkOption) (error, []FileInfo) {
 	// 	return nil
 	// })
 
-	return err, fileInfos
+	return fileInfos, err
 }
 
 func Exists(filename string) bool {

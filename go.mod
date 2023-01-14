@@ -1,4 +1,4 @@
-module github.com/takoyaki-3/go-file-tool
+module github.com/takoyaki-3/go-file-tool/v2
 
 go 1.16
 
