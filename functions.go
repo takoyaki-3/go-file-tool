@@ -20,7 +20,7 @@ type FileInfo struct {
 
 func (f *FileInfo)Extension()string{
 	a := strings.Split(f.Name,".")
-	if len(a)==0{
+	if len(a)==1{
 		return ""
 	}
 	return a[len(a)-1]
